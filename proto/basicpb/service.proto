@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package basic;
+
+import "basicpb/message.proto";
+
+option go_package = "github.com/liuliliujian/go-service-protos/proto/basicpb";
+
+import "google/protobuf/wrappers.proto";
+
+service BizConfigs {
+    rpc GetBizConfigByKey(google.protobuf.StringValue) returns (BizConfigResult) {}
+}

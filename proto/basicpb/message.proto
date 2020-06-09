@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package basic;
+
+option go_package = "github.com/liuliliujian/go-service-protos/proto/basicpb";
+
+import "google/protobuf/timestamp.proto";
+
+message BizConfig {
+    int64 id = 1;
+    string key = 5;
+    string value = 8;
+    google.protobuf.Timestamp createdTime = 4;
+}
+
+message BizConfigResult {
+    BizConfig bizconf = 1;
+}
